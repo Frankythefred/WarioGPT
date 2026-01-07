@@ -1,3 +1,4 @@
+import time
 import numpy as np
 from PIL import Image
 from openai import OpenAI
@@ -51,4 +52,8 @@ with col3:
 
 with col2:
   if name == "Matthias" and wah == "What is the meaning of life?":
+
+    response = "I see..."
+    time.sleep(3)
+
     st.markdown('<iframe src="https://drive.google.com/file/d/16tWyiUyckJzyNBm57vLIxSz5c52Ro769/preview" width="600" height="600"></iframe>', unsafe_allow_html=True)
