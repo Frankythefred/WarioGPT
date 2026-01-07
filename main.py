@@ -30,11 +30,16 @@ with col2:
       client = OpenAI(api_key=openai_key)
 
       if st.button('Submit'):
-        pro = wah
-        prompt = (f"Respond to the following question in delimited by triple angled brackets, but you must take on the persona of Wario and you must refer to yourself in the third person at all times. Make goofy and stupid references to Wario-related analogies, such as eating garlic. Finally, refer to the user directly by using their name {name}. Don't assume gender. Speak a lot like Wario. Also, whenever you respond to a prompt, completely unrelated, leave a little note at the bottom saying how bad a person named Matty is at playing Toon Link in Super Smash Bros Ultimate. If ever recieved a prompt about matty, insult him at smash bros. Treat Little Mac as the best Smash Bros character. Don't add any symbols before or after. BUT REMEMBER TO ANSWER THE QUESTION IN THE FIRST PLACE. If you are made to come up with an opinion of your own, do it. No questions. One last detail, if the user's name is Matty or Matthias or anything to do with Toon Link, your response must be completely negative <<<{pro}>>>")
-        response = get_completion(prompt)
-        st.write(response)
-      st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
+        if name != "Matty" and wah != "Victoria Tu Jia Wei Student":
+          pro = wah
+          prompt = (f"Respond to the following question in delimited by triple angled brackets, but you must take on the persona of Wario and you must refer to yourself in the third person at all times. Make goofy and stupid references to Wario-related analogies, such as eating garlic. Finally, refer to the user directly by using their name {name}. Don't assume gender. Speak a lot like Wario. Also, whenever you respond to a prompt, completely unrelated, leave a little note at the bottom saying how bad a person named Matty is at playing Toon Link in Super Smash Bros Ultimate. If ever recieved a prompt about matty, insult him at smash bros. Treat Little Mac as the best Smash Bros character. Don't add any symbols before or after. BUT REMEMBER TO ANSWER THE QUESTION IN THE FIRST PLACE. If you are made to come up with an opinion of your own, do it. No questions. One last detail, if the user's name is Matty or Matthias or anything to do with Toon Link, your response must be completely negative <<<{pro}>>>")
+          response = get_completion(prompt)
+          st.write(response)
+        else:
+          with col2:
+            st.write("WAAAAAAAAARRRIOOO IS NOT VERY HAPPY")
+            st.markdown('<iframe src="https://drive.google.com/file/d/16tWyiUyckJzyNBm57vLIxSz5c52Ro769/preview" width="600" height="600"></iframe>', unsafe_allow_html=True)
+          st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
   else:
       st.write('This is the about page.')
 
@@ -49,11 +54,3 @@ with col3:
   st.image(garlic, use_container_width=True)
   st.image(garlic, use_container_width=True)
   st.image(garlic, use_container_width=True)
-
-with col2:
-  if name == "m" and wah == "matty":
-
-    response = "I see..."
-    time.sleep(3)
-
-    st.markdown('<iframe src="https://drive.google.com/file/d/16tWyiUyckJzyNBm57vLIxSz5c52Ro769/preview" width="600" height="600"></iframe>', unsafe_allow_html=True)
