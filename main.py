@@ -38,7 +38,7 @@ with col2:
           st.write(response)
         else:
           with col2:
-            st.write("WAAAAAAAAARRRIOOO IS NOT VERY HAPPY")
+            st.write("NOOOOOOOOOOOOOOOWAAAAAAAAARRRIOOO IS NOT VERY HAPPY")
             st.markdown('<iframe src="https://drive.google.com/file/d/16tWyiUyckJzyNBm57vLIxSz5c52Ro769/preview" width="600" height="600"></iframe>', unsafe_allow_html=True)
           st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
   else:
