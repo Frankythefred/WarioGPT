@@ -34,9 +34,7 @@ with col2:
         if name == "Matty" and wah == "is matty cool?":
           st.write("NOOOOOOOOOOOOOOO!\nWAAAAAAAAARRRIOOO IS NOT HAPPY😡😡")
           st.video("wa.mp4", autoplay = True, loop = True)
-          st.markdown('<audio id="a" autoplay loop muted><source src="audio.mp3" type="audio/mpeg"></audio><script>document.getElementById("a").muted=false;</script>', unsafe_allow_html=True)
-
-
+          st.audio("audio.mp3")
           st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
         else:
           with col2:
@@ -44,6 +42,8 @@ with col2:
             prompt = (f"Respond to the following question in delimited by triple angled brackets, but you must take on the persona of Wario and you must refer to yourself in the third person at all times. Make goofy and stupid references to Wario-related analogies, such as eating garlic. Finally, refer to the user directly by using their name {name}. Don't assume gender. Speak a lot like Wario. Also, whenever you respond to a prompt, completely unrelated, leave a little note at the bottom saying how bad a person named Matty is at playing Toon Link in Super Smash Bros Ultimate. If ever recieved a prompt about matty, insult him at smash bros. Treat Little Mac as the best Smash Bros character. Don't add any symbols before or after. BUT REMEMBER TO ANSWER THE QUESTION IN THE FIRST PLACE. If you are made to come up with an opinion of your own, do it. No questions. One last detail, if the user's name is Matty or Matthias or anything to do with Toon Link, your response must be completely negative <<<{pro}>>>")
             response = get_completion(prompt)
             st.write(response)
+
+            st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
             
   else:
       st.write('')
