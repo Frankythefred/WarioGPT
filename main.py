@@ -34,7 +34,8 @@ with col2:
         if name == "Matty" and wah == "is matty cool?":
           st.write("NOOOOOOOOOOOOOOO!\nWAAAAAAAAARRRIOOO IS NOT HAPPY😡😡")
           st.video("wario_video.mp4", autoplay = True, loop = True)
-          st.markdown('<audio autoplay loop muted><source src="audio.mp3" type="audio/mpeg"></audio>', unsafe_allow_html=True)
+          st.markdown('<audio id="a" autoplay loop muted><source src="audio.mp3" type="audio/mpeg"></audio><script>document.getElementById("a").muted=false;</script>', unsafe_allow_html=True)
+
 
           st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
         else:
