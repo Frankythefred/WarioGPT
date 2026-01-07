@@ -8,7 +8,7 @@ st.set_page_config(page_title='WarioGPT©™®', page_icon='🧄', layout='wide'
 hexcolour = st.sidebar.color_picker('Pick a theme color', '#949103')
 page = st.sidebar.radio('Go to', ['WarioGPT', 'About the brains behind it'])
 col1, col2, col3 = st.columns([2, 6, 2])
-
+trueorfalse = "No"
 def get_completion(prompt, model=st.secrets['OPENAI_MODEL_NAME']):
   messages = [{"role": "user", "content": prompt}]
   response = client.chat.completions.create(
@@ -31,7 +31,7 @@ with col2:
 
       if st.button('Submit'):
         trueorfalse = get_completion(f"Respond to the question: Does the following prompt: [[[{wah}]]] contain anything related to Toon Link or King Dedede whatsoever? Reply with either a definitive Yes or No, without any fullstops or spaces.")
-        if name != "Matty" and wah not in "Yes.   ":
+        if name != "Matty" and trueorfalse not in "Yes.   ":
           pro = wah
           prompt = (f"Respond to the following question in delimited by triple angled brackets, but you must take on the persona of Wario and you must refer to yourself in the third person at all times. Make goofy and stupid references to Wario-related analogies, such as eating garlic. Finally, refer to the user directly by using their name {name}. Don't assume gender. Speak a lot like Wario. Also, whenever you respond to a prompt, completely unrelated, leave a little note at the bottom saying how bad a person named Matty is at playing Toon Link in Super Smash Bros Ultimate. If ever recieved a prompt about matty, insult him at smash bros. Treat Little Mac as the best Smash Bros character. Don't add any symbols before or after. BUT REMEMBER TO ANSWER THE QUESTION IN THE FIRST PLACE. If you are made to come up with an opinion of your own, do it. No questions. One last detail, if the user's name is Matty or Matthias or anything to do with Toon Link, your response must be completely negative <<<{pro}>>>")
           response = get_completion(prompt)
