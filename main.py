@@ -33,7 +33,7 @@ with col2:
         trueorfalse = get_completion(f"Respond to the question: Does the following prompt: [[[{wah}]]] contain anything related to or slightly related to Toon Link or King Dedede whatsoever? Reply with either a definitive Yes or No, without any fullstops or spaces.")
         if name == "Matty" and wah == "is matty cool?":
           st.write("NOOOOOOOOOOOOOOO!\nWAAAAAAAAARRRIOOO IS NOT HAPPY😡😡")
-          st.markdown('<iframe src="https://drive.google.com/file/d/16tWyiUyckJzyNBm57vLIxSz5c52Ro769/preview" width="600" height="600"></iframe>', unsafe_allow_html=True)
+          st.video("wario_video.mp4", autoplay = True, loop = True)
           st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
         else:
           with col2:
@@ -43,7 +43,7 @@ with col2:
             st.write(response)
             
   else:
-      st.write('This is the about page.')
+      st.write('')
 
 with col1:
   garlic = Image.open("garlic.png")
