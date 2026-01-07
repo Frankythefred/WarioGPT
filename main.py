@@ -33,7 +33,7 @@ with col2:
         trueorfalse = get_completion(f"Respond to the question: Does the following prompt: [[[{wah}]]] contain anything related to or slightly related to Toon Link or King Dedede whatsoever? Reply with either a definitive Yes or No, without any fullstops or spaces.")
         if name == "Matty" and wah == "is matty cool?":
           st.write("NOOOOOOOOOOOOOOO!\nWAAAAAAAAARRRIOOO IS NOT HAPPY😡😡")
-          st.video("wario_video.mp4", autoplay = True, loop = True)
+          st.video("wario_video.mp4", autoplay = True, loop = True, mute = True)
           st.markdown('<div style="display:flex; justify-content:center; overflow:hidden; height:105px;"><iframe width="110" height="200" src="https://www.myinstants.com/instant/wario-dies-in-a-car-crash-80322/embed/" frameborder="0" scrolling="no"></iframe></div>', unsafe_allow_html=True)
           st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
         else:
