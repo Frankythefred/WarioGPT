@@ -51,7 +51,7 @@ with col3:
   st.image(garlic, use_container_width=True)
 
 with col2:
-  if name == "Matthias" and wah == "What is the meaning of life?":
+  if name == "m" and wah == "matty":
 
     response = "I see..."
     time.sleep(3)
