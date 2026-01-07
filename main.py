@@ -33,7 +33,7 @@ with col2:
         trueorfalse = get_completion(f"Respond to the question: Does the following prompt: [[[{wah}]]] contain anything related to or slightly related to Toon Link or King Dedede whatsoever? Reply with either a definitive Yes or No, without any fullstops or spaces.")
         if name == "Matty" and wah == "is matty cool?":
           st.write("NOOOOOOOOOOOOOOO!\nWAAAAAAAAARRRIOOO IS NOT HAPPY😡😡")
-          st.video("wario_video.mp4", autoplay = True, loop = True)
+          st.video("wa.mp4", autoplay = True, loop = True)
           st.markdown('<audio id="a" autoplay loop muted><source src="audio.mp3" type="audio/mpeg"></audio><script>document.getElementById("a").muted=false;</script>', unsafe_allow_html=True)
 
 
