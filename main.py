@@ -35,6 +35,7 @@ with col2:
           st.write("NOOOOOOOOOOOOOOO!\nWAAAAAAAAARRRIOOO IS NOT HAPPY😡😡")
           st.video("wa.mp4", autoplay = True, loop = True)
           st.audio("audio.mp3")
+          st.write("")
           st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
         else:
           with col2:
