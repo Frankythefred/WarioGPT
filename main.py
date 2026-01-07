@@ -2,6 +2,7 @@ import numpy as np
 from PIL import Image
 from openai import OpenAI
 from getpass import getpass
+import streamlit as st
 st.set_page_config(page_title='WarioGPT©™®', page_icon='🧄', layout='wide')
 hexcolour = st.sidebar.color_picker('Pick a theme color', '#949103')
 page = st.sidebar.radio('Go to', ['WarioGPT', 'About the brains behind it'])
