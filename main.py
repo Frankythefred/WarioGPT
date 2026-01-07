@@ -1,16 +1,13 @@
-import streamlit as st
 import numpy as np
 from PIL import Image
 from openai import OpenAI
 from getpass import getpass
-from google.colab import userdata
 st.set_page_config(page_title='WarioGPT©™®', page_icon='🧄', layout='wide')
-
 hexcolour = st.sidebar.color_picker('Pick a theme color', '#949103')
 page = st.sidebar.radio('Go to', ['WarioGPT', 'About the brains behind it'])
 col1, col2, col3 = st.columns([2, 6, 2])
 
-def get_completion(prompt, model="gpt-4o-mini"):
+def get_completion(prompt, model=st.secrets['OPENAI_MODEL_NAME']):
   messages = [{"role": "user", "content": prompt}]
   response = client.chat.completions.create(
     model=model,
@@ -27,7 +24,8 @@ with col2:
       st.markdown(f'<style>.stTextInput input[aria-label="Question for wario"] {{background-color: #949103; color: #000000;}}</style>', unsafe_allow_html=True)
 
       wah = st.text_input("Question for wario")
-
+      openai_key = st.secrets['OPENAI_API_KEY']
+      client = OpenAI(api_key=openai_key)
 
       if st.button('Submit'):
         pro = wah
