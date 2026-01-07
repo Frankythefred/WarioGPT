@@ -50,4 +50,5 @@ with col3:
   st.image(garlic, use_container_width=True)
 
 with col2:
-  st.markdown('<iframe src="https://drive.google.com/file/d/16tWyiUyckJzyNBm57vLIxSz5c52Ro769/preview" width="600" height="600"></iframe>', unsafe_allow_html=True)
+  if name == "Matthias" and wah == "What is the meaning of life?":
+    st.markdown('<iframe src="https://drive.google.com/file/d/16tWyiUyckJzyNBm57vLIxSz5c52Ro769/preview" width="600" height="600"></iframe>', unsafe_allow_html=True)
