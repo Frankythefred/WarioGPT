@@ -30,7 +30,7 @@ with col2:
       client = OpenAI(api_key=openai_key)
 
       if st.button('Submit'):
-        trueorfalse = get_completion(f"Respond to the question: Does the following prompt: [[[{wah}]]] contain anything related to Toon Link or King Dedede whatsoever? Reply with either a definitive Yes or No, without any fullstops or spaces.")
+        trueorfalse = get_completion(f"Respond to the question: Does the following prompt: [[[{wah}]]] contain anything related to or slightly related to Toon Link or King Dedede whatsoever? Reply with either a definitive Yes or No, without any fullstops or spaces.")
         st.write(trueorfalse)
         if name != "Matty" and trueorfalse not in "Yes.   ":
           pro = wah
