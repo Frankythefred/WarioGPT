@@ -34,7 +34,8 @@ with col2:
         if name == "Matty" and wah == "is matty cool?":
           st.write("NOOOOOOOOOOOOOOO!\nWAAAAAAAAARRRIOOO IS NOT HAPPY😡😡")
           st.video("wario_video.mp4", autoplay = True, loop = True)
-          st.markdown('<iframe width="110" height="200" src="https://www.myinstants.com/instant/wario-dies-in-a-car-crash-80322/embed/" frameborder="0" scrolling="no"></iframe>', unsafe_allow_html=True)
+          with col2:
+            st.markdown('<iframe width="110" height="200" src="https://www.myinstants.com/instant/wario-dies-in-a-car-crash-80322/" frameborder="0" scrolling="no"></iframe>', unsafe_allow_html=True)
           st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
         else:
           with col2:
