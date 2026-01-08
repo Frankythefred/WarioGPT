@@ -22,7 +22,7 @@ with col2:
   if page == 'WarioGPT':
       st.markdown(f'<h1 style="color:{hexcolour}">  WarioGPT</h1>', unsafe_allow_html=True)
       st.image("wariofinal.png")
-      name = st.text_input('Your name', 'Wario')
+      name = st.text_input('Your name', 'Waluigi')
       st.markdown(f'<style>.stTextInput input[aria-label="Question for wario"] {{background-color: #949103; color: #000000;}}</style>', unsafe_allow_html=True)
 
       wah = st.text_input("Question for wario")
