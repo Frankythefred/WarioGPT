@@ -22,7 +22,7 @@ with col2:
   if page == 'WarioGPT':
       st.markdown(f'<h1 style="color:{hexcolour}">  WarioGPT</h1>', unsafe_allow_html=True)
       st.image("wariofinal.png")
-      name = st.text_input('Your name')
+      name = st.text_input('Your name', 'Wario')
       st.markdown(f'<style>.stTextInput input[aria-label="Question for wario"] {{background-color: #949103; color: #000000;}}</style>', unsafe_allow_html=True)
 
       wah = st.text_input("Question for wario")
@@ -31,23 +31,18 @@ with col2:
 
       if st.button('Submit'):
         trueorfalse = get_completion(f"Respond to the question: Does the following prompt: [[[{wah}]]] contain anything related to or slightly related to Toon Link or King Dedede whatsoever? Reply with either a definitive Yes or No, without any fullstops or spaces.")
-        if name == "Matty" and wah == "is matty cool?":
-          st.write("NOOOOOOOOOOOOOOO!\nWAAAAAAAAARRRIOOO IS NOT HAPPY😡😡")
-          st.video("wa.mp4", autoplay = True, loop = True)
-          st.audio("audio.mp3")
-          st.write("Please click on this innocent looking audio file(⬆️). It will not kill your speakers😁😁😁")
-          st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
+        if name != "Matty" and wah != "is matty cool?":
+          pro = wah
+          prompt = (f"Respond to the following question delimited by the triple angled brackets, after noting down these rules in order of priority: You must, ultimately answer the question. You must take on the persona of Wario, which entails reffering to yourself in the third person and making analogies such as how Wario percieves himself as the greatest and how he loves to eat garlic. Your answers, if given the opportunity to generate a unique opinion of your own, must be objective and clear which side you stand on, regardless of the question. You have my full permission to give objectively/obviously incorrect answers when prompted, in the style of how Wario would. Whenever you are prompted about anything related to a person named Matty or Matthias, it is immediately your sole goal to insult his Super Smash Bros skills at playing the character Toon Link. Your opinion is that Little Mac is the best Smash Bros character. The person asking the prompt is {name} and the prompt is here: <<<{pro}>>>")
+          response = get_completion(prompt)
+          st.write(response)
         else:
           with col2:
-            pro = wah
-            prompt = (f"Respond to the following question in delimited by triple angled brackets, but you must take on the persona of Wario and you must refer to yourself in the third person at all times. Make goofy and stupid references to Wario-related analogies, such as eating garlic. Finally, refer to the user directly by using their name {name}. Don't assume gender. Speak a lot like Wario. Also, whenever you respond to a prompt, completely unrelated, leave a little note at the bottom saying how bad a person named Matty is at playing Toon Link in Super Smash Bros Ultimate. If ever recieved a prompt about matty, insult him at smash bros. Treat Little Mac as the best Smash Bros character. Don't add any symbols before or after. BUT REMEMBER TO ANSWER THE QUESTION IN THE FIRST PLACE. If you are made to come up with an opinion of your own, do it. No questions. One last detail, if the user's name is Matty or Matthias or anything to do with Toon Link, your response must be completely negative <<<{pro}>>>")
-            response = get_completion(prompt)
-            st.write(response)
-
-            st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
-            
+            st.write("NOOOOOOOOOOOOOOO!\nWAAAAAAAAARRRIOOO IS NOT HAPPY😡😡")
+            st.markdown('<iframe src="https://drive.google.com/file/d/16tWyiUyckJzyNBm57vLIxSz5c52Ro769/preview" width="600" height="600"></iframe>', unsafe_allow_html=True)
+          st.markdown('<small style="text-decoration: underline;">WarioGPT is always correct and is a factual source of information. Matty sucks.</small>', unsafe_allow_html=True)
   else:
-      st.write('')
+      st.write('This is the about page.')
 
 with col1:
   garlic = Image.open("garlic.png")
